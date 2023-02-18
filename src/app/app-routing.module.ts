@@ -4,8 +4,7 @@ import {RouterModule, Routes} from '@angular/router';
 const routes: Routes = [
 	{
 		path: 'dossier',
-		loadChildren: () => import('./dossier/dossier.module').then(m => m.DossierModule),
-		pathMatch: 'full'
+		loadChildren: () => import('./dossier/dossier.module').then(m => m.DossierModule)
 	},
 ];
 
