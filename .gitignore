@@ -1,3 +1,5 @@
 *.iml
 .idea
 .angular
+
+node_modules
