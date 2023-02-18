@@ -23,5 +23,5 @@ import {MatButtonModule} from '@angular/material/button';
 		HeaderComponent
 	]
 })
-export class HeaderModule {
+export class LayoutModule {
 }
