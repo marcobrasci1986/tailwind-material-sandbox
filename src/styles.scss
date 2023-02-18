@@ -6,3 +6,9 @@
 body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+@layer base {
+  h1 {
+    @apply text-4xl font-medium
+  }
+}

@@ -1,16 +1,14 @@
-<section class="m-10">
-    <h1 class="text-3xl font-bold underline pt-1">
-        Hello world!
-    </h1>
-    <div class="flex gap-2">
-        <div class="bg-amber-400 w-1/2 p-5">
-            First Element
-        </div>
-        <div class="bg-amber-400 w-1/2 p-5">
-            Second Element
-        </div>
-    </div>
-    <div class="flex">
-        <mat-slide-toggle>Toggle me!</mat-slide-toggle>
-    </div>
-</section>
+<header>
+    <mat-toolbar color="primary">
+        <mat-toolbar-row class="flex justify-between">
+            <div>My App</div>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </mat-toolbar-row>
+    </mat-toolbar>
+</header>
+
+<main class="p-5">
+    <router-outlet></router-outlet>
+</main>
