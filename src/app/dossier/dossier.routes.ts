@@ -10,7 +10,12 @@ export const routes: Route[] = [
 		component: DossierPageComponent,
 		children: [
 			{
-				path: 'list', // / dossier/list
+				path: '',
+				redirectTo: 'list',
+				pathMatch: 'full' // redirects /dossier to /dossier/list
+			},
+			{
+				path: 'list', // /dossier/list
 				component: DossierListContainerComponent,
 			}
 		]
