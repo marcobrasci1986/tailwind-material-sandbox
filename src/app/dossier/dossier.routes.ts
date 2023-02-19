@@ -6,17 +6,17 @@ import {
 
 export const routes: Route[] = [
 	{
-		path: '', // /dossier
+		path: 'dossier', // path = /dossier
 		component: DossierPageComponent,
 		children: [
 			{
-				path: '',
+				path: '', // Default path when no child path is specified
 				redirectTo: 'list',
-				pathMatch: 'full' // redirects /dossier to /dossier/list
+				pathMatch: 'full' // redirects /dossier to /dossier/list as a default
 			},
 			{
-				path: 'list', // /dossier/list
-				component: DossierListContainerComponent,
+				path: 'list', // path = /dossier/list
+				component: DossierListContainerComponent, // Can we lazy load this?
 			}
 		]
 	},
