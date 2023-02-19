@@ -4,7 +4,14 @@ import {DossierListContainerComponent} from './container/dossier-list-conainer/d
 import {MatTableModule} from '@angular/material/table';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
+import {Route, RouterModule} from '@angular/router';
 
+export const routes: Route[] = [
+	{
+		path: '', // dossier/list
+		component: DossierListContainerComponent
+	}
+]
 
 @NgModule({
 	declarations: [
@@ -14,7 +21,8 @@ import {MatButtonModule} from '@angular/material/button';
 		CommonModule,
 		MatTableModule,
 		MatToolbarModule,
-		MatButtonModule
+		MatButtonModule,
+		RouterModule.forChild(routes),
 	]
 })
 export class DossierListModule {

@@ -1,12 +1,9 @@
 import {DossierPageComponent} from './dossier-page/dossier-page.component';
 import {Route} from '@angular/router';
-import {
-	DossierListContainerComponent
-} from './dossier-list/container/dossier-list-conainer/dossier-list-container.component';
 
 export const routes: Route[] = [
 	{
-		path: 'dossier', // path = /dossier
+		path: '', // path = /dossier
 		component: DossierPageComponent,
 		children: [
 			{
@@ -16,7 +13,7 @@ export const routes: Route[] = [
 			},
 			{
 				path: 'list', // path = /dossier/list
-				component: DossierListContainerComponent, // Can we lazy load this?
+				loadChildren: () => import('./dossier-list/dossier-list.module').then(m => m.DossierListModule)
 			}
 		]
 	},
